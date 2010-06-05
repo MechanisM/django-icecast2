@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>TranceWay BroadCast</title>
+    <link>http://tranceway.me/</link>
+    <description>IceCast2 Mount Points</description>
+    <lastBuildDate>Fri, 04 Jun 2010 20:11:54 +0000</lastBuildDate>
+    <generator>Django-IceCast2</generator>
+{% for item in items %}
+    <item>
+      <title>{{ item.server_name }}</title>
+      <link></link>
+      <guid></guid>
+      <description></description>
+      <enclosure url="{{ item.listenurl }}" type="{{ item.server_type }}"/>
+    </item>
+{% endfor %}
+  </channel>
+</rss>
